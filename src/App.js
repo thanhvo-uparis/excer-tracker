@@ -1,6 +1,6 @@
 import react from 'react';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+// import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Navbar from './components/navbar/Navbar';
@@ -11,14 +11,13 @@ import CreateUser from './components/users/CreateUser';
 function App() {
   return (
     <div className="app-container">
-        <p>Welcome to my page</p>
         <Router>
            <Navbar/>
            <br/>
            <Routes>
-              <Route path="/" exact component="ExercisesList"/>
-              <Route path="/create" exact component="CreateExercise"/>
-              <Route path="/user" exact component="CreateUser"/>
+              <Route path="/list" element={ExercisesList}/>
+              <Route path="/create" element={CreateExercise}/>
+              <Route path="/user" element={CreateUser}/>
            </Routes>
         </Router>
     </div>
