@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+const exerciseRouter = require('./routes/exercise');
+const userRouter = require('./routes/user');
+
 require('dotenv').config();
  
 const app = express();
@@ -16,6 +19,9 @@ const URI = "mongodb+srv://thanhvo:node123@cluster0.dha26.mongodb.net/myFirstDat
 app.get("/", (request, response) => {
         response.send("get a réussi!");
 })
+
+app.use("/exercise", exerciseRouter);
+app.use("/user", userRouter);
 
 mongoose.connect(URI, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log("Contected to DB");
