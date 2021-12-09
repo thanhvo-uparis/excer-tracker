@@ -1,16 +1,14 @@
 const express = require('express');
-
 const router = express.Router();
+let User = require('../models/exercise.model');
 
 /*
-router.route.get("/", (request, response) => {
-        response.send("success to router exercise!")
+router.route("/").get((request, response) => {
+    response.send("success to router user!!")
 });
 
-export default router;
+module.exports = router;
 */
-
-let User = require('../models/exercise.model');
 
 router.route("/").get((request, response) => {
     User.find()
