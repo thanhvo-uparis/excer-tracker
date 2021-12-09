@@ -1,19 +1,23 @@
 const express = require('express');
 const router = express.Router();
-let User = require('../models/exercise.model');
 
-/*
+let User = require('../models/user.model');
+
 router.route("/").get((request, response) => {
-    response.send("success to router user!!")
+        User.find()
+            .then(user => response.json(user))
+            .catch(err => response.status(400).json("Error: " + err))
 });
 
-module.exports = router;
-*/
+router.route("/add").post((request, response) => {
+    const username = request.body.username;
+    const newUser = User({
+        username
+    });
 
-router.route("/").get((request, response) => {
-    User.find()
-    .then(users => response.json(users))
-    .catch(err => response.status(400).json('Error: ' + err));
+    newUser.save()
+        .then(() => response.json("successfully added username!"))
+        .catch(err => response.status(400).json("Error: " + err))
 })
 
 module.exports = router;
