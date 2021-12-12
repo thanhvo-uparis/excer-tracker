@@ -10,17 +10,15 @@ import CreateUser from './components/users/CreateUser';
 
 function App() {
   return (
-    <div className="app-container">
         <Router>
            <Navbar/>
            <br/>
-           <Routes>
-              <Route path="/list" element={ExercisesList}/>
-              <Route path="/create" element={CreateExercise}/>
-              <Route path="/user" element={CreateUser}/>
-           </Routes>
+            <Routes>
+              <Route path="/list" element={<ExercisesList/>}/>
+              <Route path="/create" element={<CreateExercise/>}/>
+              <Route path="/user" element={<CreateUser/>}/>
+            </Routes>
         </Router>
-    </div>
   );
 }
 
