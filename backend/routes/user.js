@@ -15,9 +15,9 @@ router.route("/add").post((request, response) => {
         username
     });
 
-    newUser.save()
-        .then(() => response.json("successfully added username!"))
-        .catch(err => response.status(400).json("Error: " + err))
+    newUser.save().then(
+        () => response.json("added user!")
+    ).catch(err => response.status(400).json("Error: " + err))
 })
 
 module.exports = router;
