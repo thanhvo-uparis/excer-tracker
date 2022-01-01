@@ -1,0 +1,22 @@
+.navbar {
+    height: 45px;
+    background-color: rgb(121, 201, 233);
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: row; */
+}
+
+.nav-home > * {
+    text-decoration: none;
+}
+
+.navbar > * {
+    margin: 1rem;
+    color: #000;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+.navbar > *:hover {
+    color: #5e5f69;
+}
