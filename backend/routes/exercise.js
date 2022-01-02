@@ -4,7 +4,7 @@ const router = express.Router();
 let Exercise = require('../models/exercise.model');
 
 router.route("/").get((request, response) => {
-        User.find()
+        Exercise.find()
             .then(exercise => response.json(exercise))
             .catch(err => response.status(400).json("Error: " + err))
 });

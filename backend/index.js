@@ -14,11 +14,11 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-const URI = "mongodb+srv://thanhvo:node123@cluster0.dha26.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const URI = "mongodb+srv://thanhvo:node123@cluster0.puqii.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
 
 app.get("/", (request, response) => {
-        response.send("get a réussi!");
+        response.send("Connectedd");
 })
 
 app.use("/exercise", exerciseRouter);

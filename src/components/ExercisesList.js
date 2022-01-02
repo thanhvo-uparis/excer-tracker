@@ -1,6 +1,7 @@
 const ExercisesList = () => {
     return ( 
         <>
+            Welcome to my ExcerTracker app
         </>
      );
 }
