@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
-import ExercisesList from './components/ExercisesList';
-import CreateExercise from './components/CreateExercise';
-import CreateUser from './components/CreateUser';
+import PapayesList from './components/PapayesList';
+import CreatePapaye from './components/CreatePapaye';
+import CreateStore from './components/CreateStore';
 
 const App = () =>{
     return (
@@ -12,9 +12,9 @@ const App = () =>{
             <Router>
             <Navbar/>
                 <Routes>
-                    <Route path="/" element={<ExercisesList/>}/>
-                    <Route path="/create" element={<CreateExercise/>}/>
-                    <Route path="/user" element={<CreateUser/>}/>
+                    <Route path="/" element={<PapayesList/>}/>
+                    <Route path="/papayes" element={<CreatePapaye/>}/>
+                    <Route path="/stores" element={<CreateStore/>}/>
                 </Routes>
             </Router>
         </div>
