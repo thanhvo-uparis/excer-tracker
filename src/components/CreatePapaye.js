@@ -1,3 +1,4 @@
+import "./createPapayes.css";
 import {React, useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -43,19 +44,19 @@ const CreatePapaye = () => {
       <h3>Create New Papaye</h3>
            <form onSubmit={submit}>
              <div>
-                <label>Name of papaya</label>
+                <label className="list_items">Name of papaya</label>
                 <input onChange={handleChange} name='name' value={papaye.name}/>
              </div>
              <div>
-                <label>Description</label>
+                <label className="list_items">Description</label>
                 <input onChange={handleChange} name='description' value={papaye.description}/>
              </div>
              <div>
-                <label>Type</label>
+                <label className="list_items">Type</label>
                 <input onChange={handleChange} name='type' value={papaye.type}/>
              </div>
              <div>
-                <label>Store</label>
+                <label className="list_items">Store</label>
                 <input onChange={handleChange} name='store' value={papaye.store}/>
              </div>
              <button >Submit</button>
