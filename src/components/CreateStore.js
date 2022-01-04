@@ -1,3 +1,4 @@
+import "./createStore.css";
 import {React, useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -37,22 +38,24 @@ const CreateStore = () => {
 
     
   return ( 
-    <div>
+    <div className="create-store">
       <h3>Create New Store</h3>
            <form>
-             <div>
+             <div className="list_items">
                 <label>Name of store</label>
-                <input onChange={handleChange} name='name' value={store.name}/>
+                <input type="text" onChange={handleChange} name='name' value={store.name}/>
              </div>
-             <div>
+             <div className="list_items">
                 <label>Address</label>
-                <input onChange={handleChange} name='address' value={store.address}/>
+                <input type="text" onChange={handleChange} name='address' value={store.address}/>
              </div>
-             <div>
+             <div className="list_items">
                 <label>Country</label>
-                <input onChange={handleChange} name='country' value={store.country}/>
+                <input type="text" onChange={handleChange} name='country' value={store.country}/>
              </div>
-             <button onClick={submit} >Submit</button>
+             <div className="store-footer">
+                <button className="btn-store" onClick={submit} >Submit</button>
+             </div>
            </form>
     </div>
    );

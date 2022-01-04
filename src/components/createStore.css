@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.create-store {
+    width: 354px;
+    height: 211px;
+    border: 2px solid #c7baba;
+    padding: 10px;
+    margin: 98px auto;
+    border-radius: 8px;
+    background-color: #c7baba;
+}
+
+.create-store h3 {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.list_items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.list_items input {
+    padding: 2px;
+    border: none;
+    outline: unset;
+    border-radius: 5px;
+}
+
+.btn-store {
+    width: 92px;
+    height: 32px;
+    border: none;
+    background-color: green;
+    text-align: center;
+}
+
+.store-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-store {
+    margin: 15px 0;
+    border-radius: 8px;
+    font-weight: 800;
+    transition: 0.5s;
+}
+
+.btn-store:hover {
+    transform: scale(0.9);
+}

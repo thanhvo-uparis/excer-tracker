@@ -43,23 +43,25 @@ const CreatePapaye = () => {
     <div className='create-papaye'>
       <h3>Create New Papaye</h3>
            <form onSubmit={submit}>
-             <div>
-                <label className="list_items">Name of papaya</label>
+             <div className="list_items">
+                <label>Name of papaya</label>
                 <input onChange={handleChange} name='name' value={papaye.name}/>
              </div>
-             <div>
-                <label className="list_items">Description</label>
+             <div className="list_items">
+                <label>Description</label>
                 <input onChange={handleChange} name='description' value={papaye.description}/>
              </div>
-             <div>
-                <label className="list_items">Type</label>
+             <div className="list_items">
+                <label>Type</label>
                 <input onChange={handleChange} name='type' value={papaye.type}/>
              </div>
-             <div>
-                <label className="list_items">Store</label>
+             <div className="list_items">
+                <label>Store</label>
                 <input onChange={handleChange} name='store' value={papaye.store}/>
              </div>
-             <button >Submit</button>
+             <div className="papaye-footer"> 
+                <button className="btn-papaye">Submit</button>
+             </div>
            </form>
     </div>
    );
